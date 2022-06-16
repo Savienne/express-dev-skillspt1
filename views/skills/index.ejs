@@ -9,20 +9,20 @@
 </head>
 <body>
  
-    <h1>Todos as of <%= time %></h1>
+    <h1> Current Skillset <%= time %></h1>
     <ul>
-      <% skills.forEach(skill => { %>
+      <% skills.forEach(skills => { %>
         <li>
           <form 
-          action="/skills/<%= skill._id %>?_method=DELETE"
+          action="/skills/<%= skills._id %>?_method=DELETE"
           class="delete-form"
           method="POST"
         >
           <button type="submit">X</button>
         </form>
-        <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
+        <a href="/skills/<%= skills._id %>"><%= skills.text %></a>
           - 
-          <%= skill.passing ? 'yes' : 'yes' %>
+          <%= skills.done ? 'yes' : 'no' %>
         </li>
       <% }) %>
     </ul>
