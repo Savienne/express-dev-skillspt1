@@ -1,4 +1,4 @@
-import { skills } from '../data/skills-data.js'
+// import { skills } from '../data/skills-data.js'
 import { Skill } from '../models/skills.js'
 
 function index(req,res) {
@@ -12,7 +12,7 @@ function index(req,res) {
     })
     .catch(error => {
         console.log(error)
-        res.redirect('/skills')
+        res.redirect('/')
     })
 }
 

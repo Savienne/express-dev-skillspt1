@@ -30,8 +30,8 @@ app.use(
 )
 
 // mounted routers
+app.use('/', indexRouter)
 app.use('/skills', skillsRouter)
-// app.use('/users', usersRouter)
 
 
 // catch 404 and forward to error handler
