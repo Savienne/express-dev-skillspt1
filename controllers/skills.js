@@ -39,12 +39,13 @@ function deleteSkills(req, res) {
 // }
 
 function index(req,res) {
+    // console.log(req.time)
     Skill.find({})
     .then(skills => {
         console.log(skills)
         res.render('skills/index', {
             skills: skills,
-            time: req.time
+            // time: req.time
         })
     })
     .catch(error => {
