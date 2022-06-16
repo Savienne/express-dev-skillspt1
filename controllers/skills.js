@@ -33,12 +33,14 @@ function show(req, res) {
     })
 }
 function create(req, res){
-    console.log(req.body)
     Skill.create(req.body)
-    .then(Skill => {
+    .then(skills => {
+        console.log(skills)
         res.redirect('/skills')
     })
 }
+
+    
 
 export {
     index,

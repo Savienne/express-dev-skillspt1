@@ -10,6 +10,7 @@ router.get('/skills/new')
 router.get('/:id', skillsCtrl.show)
 router.post('/', skillsCtrl.create)
 router.get('/new')
+
 export {
  router
 }
