@@ -8,7 +8,24 @@
   <title><%= title %></title>
 </head>
 <body>
-  <h1><%= title %></h1>
+  <ul>
+    <% skills.forEach(function(skills => ) { %>
+      <li>
+        <form 
+          action="/skills/<%= skills._id %>?_method=DELETE"
+          class="delete-form"
+          method="POST"
+        >
+        <button type="submit">X</button>
+      </form>
+
+        <a href="/skills/<%= skills._id %>"><%= skills.text %></a>
+          - 
+        <%= skills.done ? 'yes' : 'yes' %>
+      </li>
+    <% }) %>
+  </ul>
+
   <a href="/skills/new"></a>
 </body>
 </html>
