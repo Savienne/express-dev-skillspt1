@@ -10,15 +10,15 @@
  
     <h1>Savienne's Skills As A Student</h1>
     <ul>
-      <% skills.forEach(skills => { %>
+      <% skills.forEach(skill => { %>
         <li>
-                  <%= skills.text %> 
-                  - 
-                  <%= skills.passing? 'yes' : 'yes' %>
-              </li>
+          <% skill.text %>
+          - 
+          <%= skill.done ? 'yes' : 'no' %>
+        </li>
       <% }) %>
-    </ul>
-
+      </ul>
+      <a href="/skills/new">Add Skill</a>
     
 </body>
 </html>

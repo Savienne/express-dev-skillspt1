@@ -1,9 +1,9 @@
 const skills = [
 
-    {text: 'Fast typing',  done:true},
-    {text: 'Knowing CSS', done:true},
-    {text: 'Knowing Javascript', done: true},
-    {text: 'Knowing Javascriptt', done: true},
+    {text: 'Fast typer',  done:true},
+    {text: 'Knows CSS', done:true},
+    {text: 'Proficient in Javascript', done: true},
+    {text: 'Horse Whisperer', done: true},
 ]
 
 export {
