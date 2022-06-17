@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>Update Skills</h1>
-    <form action="/skills/<%= skill._id" method="POST" autocomplete="off">
-    <input value="<%= skill.text %>" type="text" name="text">
-    <input type="checkbox" <%= skill.done ? 'checked' : '' %> name="done">done?
-    <br><br>
-    <button type="submit">Update Skill</button>
+    <h1>Edit To-Do</h1>
+    <form action="/skills/<%= skills._id %>?_method=PUT" method="POST" autocomplete="off">
+      <input value="<%= skills.text %>" type="text" name="text">
+      <button type="submit">Update To-Do</button>
     </form><br>
-    <a href="/skills/<% skill._id%>">Modify Skill</a><br>
+    <a href="/skills/<%= skills._id %>">Cancel</a> 
 </body>
 </html>

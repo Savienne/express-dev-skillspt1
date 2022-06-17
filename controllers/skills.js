@@ -65,16 +65,19 @@ function create(req, res){
         res.redirect('/skills')
     })
 }
-
-function edit(req,res) {
-    Skills.findById(req.params.id)
-    .then(skill => {
-        res.render('skills/edit'),{
-            skill: skill
-        }
+function edit(req, res) {
+    Skill.findById(req.params.id)
+    .then(skills => {
+      res.render('skills/edit', {
+        skills: skills
+      })
     })
-}
-    
+    .catch(error => {
+      console.log(error)
+      res.redirect('/skills')
+    })
+  }
+  //edit redirects me back  to skills page but if i use skills, says not found in module
 
 export {
     index,
@@ -82,6 +85,6 @@ export {
     create,
     show,
     deleteSkills as delete,
-    edit
+    edit,
     // update
     }

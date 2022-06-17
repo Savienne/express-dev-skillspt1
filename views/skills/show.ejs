@@ -7,12 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-	<h1>Skills</h1>
-    <a href="/skills/<%= skills._id %>">Edit</a>
+	<h1> Acquired Skills</h1>
+  <a href="/skills/<%= skills._id %>/edit">Edit</a>
   <h2>Skills #<%= skills._id %></h2>
   <h3><%= skills.text %></h3>
-  <p>Complete: <%= skills.done ? 'Yes' : 'No' %></p>
-	<a href="skills">Go back</a>
-
-?</body>
+  <p>Certified: <%= skills.done ? 'Yes' : 'No' %></p>
+	<a href="/skills/">Go back</a>
+</body>
 </html>
