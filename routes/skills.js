@@ -12,6 +12,7 @@ router.get('/:id/edit', skillsCtrl.edit)
 router.post('/', skillsCtrl.create)
 router.get('/new')
 router.delete('/:id', skillsCtrl.delete)
+router.put('/:id, skills.update')
 
 export {
  router

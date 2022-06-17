@@ -28,20 +28,20 @@ app.use(express.urlencoded({ extended: false }))
 app.use(
   express.static(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
-  )
-)
-app.use(methodOverride('_method'))  
+    )
+    )
+    app.use(methodOverride('_method'))  
+    app.use(function(req, res, next) {
+      console.log('Hello SEI!')
+      req.time = new Date().toLocaleTimeString()
+      console.log(req.time)
+      next()
+    })
 
 // mounted routers
 app.use('/', indexRouter)
 app.use('/skills', skillsRouter)
-app.use(function(req, res, next) {
-  console.log('Hello')
-  req.time = new Date().toLocaleTimeString()
-  
-  next()
-})
-
+	
 
 
 // catch 404 and forward to error handler
